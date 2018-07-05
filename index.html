@@ -1,0 +1,273 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="style.css"/>
+
+<title>Studio Ghibli Central : 44370881</title>
+</head>
+<body>
+
+<!-- JS start -->
+<script language="JavaScript1.2" type="text/javascript">
+
+/***********************************************
+* Fade-in image slideshow script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var slideshow_width='100%' //SET IMAGE WIDTH
+var slideshow_height='90%' //SET IMAGE HEIGHT
+var pause=3000 //SET PAUSE BETWEEN SLIDE (3000=3 seconds)
+
+var fadeimages=new Array()
+//SET 1) IMAGE PATHS, 2) optional link, 3), optional link target:
+fadeimages[0]=["toto.jpg"] <!-- image taken from https://images2.alphacoders.com/499/499590.jpg -->
+fadeimages[1]=["howl.jpg"] <!-- image taken from https://images8.alphacoders.com/792/792194.jpg -->
+fadeimages[2]=["howl2.jpg"] <!-- image taken from http://hdw7.com/wallpapers/143/mountains-fantasy-art-river-howls-moving-castle.jpg -->
+
+
+////NO need to edit beyond here/////////////
+
+var preloadedimages=new Array()
+for (p=0;p<fadeimages.length;p++){
+preloadedimages[p]=new Image()
+preloadedimages[p].src=fadeimages[p][0]
+}
+
+var ie4=document.all
+var dom=document.getElementById
+
+if (ie4||dom)
+document.write('<div style="position:relative;width:'+slideshow_width+';height:'
++slideshow_height+';overflow:hidden"><div  id="canvas0" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height
++';top:0;left:0;filter:alpha(opacity=10);-moz-opacity:10"></div><div id="canvas1" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height
++';top:0;left:0;filter:alpha(opacity=10);-moz-opacity:10;visibility: hidden"></div></div>')
+else
+document.write('<img name="defaultslide" src="'+fadeimages[0][0]+'">')
+
+var curpos=10
+var degree=10
+var curcanvas="canvas0"
+var curimageindex=0
+var nextimageindex=1
+
+function fadepic(){
+if (curpos<100){
+curpos+=10
+if (tempobj.filters)
+tempobj.filters.alpha.opacity=curpos
+else if (tempobj.style.MozOpacity)
+tempobj.style.MozOpacity=curpos/101
+}
+else{
+clearInterval(dropslide)
+nextcanvas=(curcanvas=="canvas0")? "canvas0" : "canvas1"
+tempobj=ie4? eval("document.all."+nextcanvas) : document.getElementById(nextcanvas)
+tempobj.innerHTML=insertimage(nextimageindex)
+nextimageindex=(nextimageindex<fadeimages.length-1)? nextimageindex+1 : 0
+var tempobj2=ie4? eval("document.all."+nextcanvas) : document.getElementById(nextcanvas)
+tempobj2.style.visibility="hidden"
+setTimeout("rotateimage()",pause)
+}
+}
+
+function insertimage(i){
+var tempcontainer=fadeimages[i][1]!=""? '<a href="'+fadeimages[i][1]+'" target="'+fadeimages[i][2]+'">' : ""
+tempcontainer+='<img src="'+fadeimages[i][0]+'" border="0">'
+tempcontainer=fadeimages[i][1]!=""? tempcontainer+'</a>' : tempcontainer
+return tempcontainer
+}
+
+function rotateimage(){
+if (ie4||dom){
+resetit(curcanvas)
+var crossobj=tempobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
+crossobj.style.zIndex++
+tempobj.style.visibility="visible"
+var temp='setInterval("fadepic()",50)'
+dropslide=eval(temp)
+curcanvas=(curcanvas=="canvas0")? "canvas1" : "canvas0"
+}
+else
+document.images.defaultslide.src=fadeimages[curimageindex][0]
+curimageindex=(curimageindex<fadeimages.length-1)? curimageindex+1 : 0
+}
+
+function resetit(what){
+curpos=10
+var crossobj=ie4? eval("document.all."+what) : document.getElementById(what)
+if (crossobj.filters)
+crossobj.filters.alpha.opacity=curpos
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=curpos/101
+}
+
+function startit(){
+var crossobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
+crossobj.innerHTML=insertimage(curimageindex)
+rotateimage()
+}
+
+if (ie4||dom)
+window.onload=startit
+else
+setInterval("rotateimage()",pause)
+
+</script>
+
+<!-- JS end -->
+
+
+<center> <h1>Studio Ghibli Central</h1> </center>
+
+
+
+
+
+
+<h1>Welcome!</h1>
+<!-- Info from 
+http://www.onlineghibli.com/about.php -->
+<p>Studio Ghibli creates art that brings the child out of all of us; we at Studio Ghibli Central want to keep that spirit alive by providing the latest and detailed information 
+about each of their works while establishing a medium that reaches out to the international Ghibli-fan community.</p>
+
+<p>We are primarily involved with:</p>
+<ul>
+<li> Covering the Lastest Ghibli related news </li>
+<li> Reviewing Ghibli movies </li>
+<li> Fostering a community of people with similar interest </li>
+<li> Sharing the world of Studio Ghibli to new pottential fans  </li>
+</ul>
+
+
+
+
+
+
+
+quick links:<br/>
+
+<a href="https://www.studioghibli.com.au//">Official studio ghibli website</a> <br/>
+<a href='#News'>Latest News</a></br>
+<a href="#Reviews">Reviews</a></br>
+<a href="#Top5">Top Five Studio Ghibli Movies</a></br>
+
+
+
+<h1>So what is studio Ghibli</h1>
+<Center><img src= "studio-ghibli-banner.png" width="50%"></Center><br/><!-- image taken from http://www.mymags.net/wp-content/uploads/2012/08/studio-ghibli-banner.png -->
+
+<!-- Info from 
+https://en.wikipedia.org/wiki/Studio_Ghibli -->
+<p>Studio Ghibli, Inc. is a Japanese animation film studio based in Koganei, Tokyo, Japan. 
+The studio is best known for its anime feature films, and has also produced several short films, television commercials, and one television film. 
+It was founded on 15 June 1985, after the success of Nausicaa of the Valley of the Wind (1984), with funding by Tokuma Shoten.</p>
+
+<p>Eight of Studio Ghibli's films are among the 15 highest-grossing anime films made in Japan, with Spirited Away (2001) being the second highest, grossing over US$290 
+million worldwide. Many of their works have won the Animage Anime Grand Prix award, and four have won the Japan Academy Prize for Animation of the Year. 
+Five of Studio Ghibli's films have received Academy Award nominations. Spirited Away won the Golden Bear in 2002 and the Academy Award for Best Animated Feature Film in 2003. 
+Totoro, a character from My Neighbor Totoro, is the studio's mascot.</p>
+
+
+
+
+
+
+
+
+
+
+
+<h1 id="Top5">Top Five Ghibli Movies of all time </h1>
+
+<table>
+<th><table>
+
+<tr>
+<th>Year</th>
+<th>Title</th>
+<th>Screen Writer</th>
+<th>Ratings</th>
+</tr>
+
+<tr>
+<td>2001</td>
+<td>Spirited Away</td>
+<td>Hayao Miyazaki</td>
+<td>9.5</td>
+</tr>
+
+<tr>
+<td>1887</td>
+<td>Princess Mononoke</td>
+<td>Hayao Miyazaki</td>
+<td>8.5</td>
+</tr>
+
+<tr>
+<td>1988</td>
+<td>My Neighbor Totoro</td>
+<td>Hayao Miyazaki</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1992</td>
+<td>Porco Rosso</td>
+<td>Hayao Miyazaki</td>
+<td>7.5</td>
+</tr>
+
+<tr>
+<td>1986</td>
+<td>Castle in the Sky</td>
+<td>Hayao Miyazaki</td>
+<td>7.5</td>
+</tr>
+
+
+</table></th>
+
+<th>Studio Ghibli Movie Trailers: <br/>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/8ykEy-yPBFc?list=PLkukk61q9mY_ps9HKovftqotZiKb34BVt" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></th>
+
+</table>
+
+<a id= "News"/>
+<h1>Latest News </h1>
+<h2>Studio Ghibli To Re-Open For Hayao Miyazaki's New Film</h2>
+<!-- Info from 
+https://www.empireonline.com/people/hayao-miyazaki/studio-ghibli-re-open-hayao-miyazaki-new-film/ -->
+<p> While we were all sorry to hear that Studio Ghibli, the legendary animation company behind such films as My Neighbour Totoro, Howl's Moving Castle and Spirited Away
+ was closing its doors for an indefinite hiatus, the Ghibli team never quite went away, working on TV projects, lending its name to other companies' films and even 
+ planning for a theme park. And now comes some really good news: co-founder Hayao Miyazaki has decided to come out of retirement for a new project, and Ghibli will be 
+ back in full production to support the feature film.</p>
+
+<p>A little like Steven Soderbergh, Miyazaki himself didn't ever fully retire, instead spending his time on a short entitled Kemushi no Boro (Boro The Caterpillar) 
+for the Ghibli museum. And, inspired by his work on that, he had announced that he intended to turn the project into a full-length animated movie.</p>
+
+<p>As part of a small ceremony in July, Miyazaki brought together some of the main people 
+involved in the film to talk about the idea, with the studio starting to recruit artists later that month. Training for new arrivals will 
+kick off in October and the film should properly be in production a few months after that. There's no official confirmation that the new project will be the 
+full-length version of Boro, but we're just happy that he and his company are back to weave their particular magic on screens.</p>
+
+<a id= "Reviews"/>
+<h1>Reviews</h1>
+<h2>Sprited Away</h2>
+<!-- Info from 
+https://www.theguardian.com/film/2003/sep/12/spirited-away-review -->
+<p>Magical is a word used casually about films like this, films about fantasy and childhood. Yet this one really does deserve it: an enchanted and enchanting feature from the Japanese animator Hayao Miyazaki which left me feeling lighter than air. It is a beautifully drawn and wonderfully composed 
+work of art - really, no other description will do - which takes us on a rocket-fuelled flight of fancy, with tenderly and shrewdly conceived characters on board.<a href="page1.html">Continue the the full article</a></p>
+<h2>Princess Mononoke</h2>
+<!-- Info from 
+https://www.empireonline.com/movies/princess-mononoke/review/ -->
+
+<p>It cost $20 million to make, took $50 million in its first 12 days on domestic release, eventually grossed $157 million, and, in doing so, overtook E.T. 
+to set an all-time Japanese box office record. It stars the vocal talents of a superb ensemble cast (see above). Its English dub was written 
+by cult comic scribe, Neil Gaiman. And it's been described as one of the best animated films ever. Hell, Disney 
+were so impressed, they bought the entire output of the studio that made it, Studio Ghibli, for worldwide distribution. And, chances are, you've never even heard of it.<a href="page2.html">Continue the the full article</a></p>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+</body>
+</html>

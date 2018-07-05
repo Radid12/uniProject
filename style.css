@@ -1,0 +1,48 @@
+body {
+background: white;
+background-image: url(X.png);
+background-position: right bottom;
+background-repeat: no-repeat;
+font-family: "Century Gothic" ;
+color: #0d0d0d;
+}
+
+h1 {
+font-family: Sans Serif;
+font-size: 32pt;
+color: MediumSeaGreen;
+}
+
+h2 {
+font-family: Sans Serif;
+font-size: 16pt;
+color: #262626;
+font-style: italic;
+}
+
+
+
+table{
+    border-collapse: collapse;
+	border: 2px solid black;
+	
+}
+
+th, td {
+
+ padding: 30px;
+    text-align: left;
+}
+
+ul {
+   text-indent: 25px;
+    text-align: justify;
+    letter-spacing: 2px;
+   list-style-type: square;
+}
+
+p {
+    text-indent: 20px;
+    text-align: left;
+    letter-spacing: 2px;
+}
